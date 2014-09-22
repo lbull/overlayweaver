@@ -67,6 +67,7 @@ public final class FingerTable {
 	 * @param k index (1 <= k <= size).
 	 */
 	public IDAddressPair get(int k) {
+		//System.out.println("debug" + k);
 		return this.fingerTable[k];
 	}
 
@@ -92,6 +93,7 @@ public final class FingerTable {
 	 * @return true if an entry was updated.
 	 */
 	public boolean put(IDAddressPair newEntry) {
+		//System.out.println("debug put: entry" + newEntry);
 		ID newID = newEntry.getID();
 		ID selfID = this.selfIDAddressPair.getID();
 

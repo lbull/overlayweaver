@@ -150,7 +150,7 @@ public interface DHT<V extends Serializable> extends HighLevelService {
 			this.key = key; this.values = values;
 		}
 
-		public ID getKey() { return this.key; }
+		public ID getKey() { System.out.println("debug put key and value" + this.key);return this.key; }
 		public V[] getValues() { return this.values; }
 
 		public String toString() {
