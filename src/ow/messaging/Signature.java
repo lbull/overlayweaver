@@ -18,7 +18,7 @@
 package ow.messaging;
 
 /**
- * A class to calculate a signature of messages.
+ * A class to calculate a signature of messages ...
  */
 public final class Signature {
 	// public constants
