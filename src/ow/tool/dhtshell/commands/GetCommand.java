@@ -91,7 +91,6 @@ public final class GetCommand implements Command<DHT<String>> {
 				if (!values[i].isEmpty()) {
 					for (ValueInfo<String> v: values[i]) {
 						sb.append("value: ").append(v.getValue()).append(" ").append(v.getTTL() / 1000);
-
 						ByteArray secret = v.getHashedSecret();
 						if (secret != null) {
 							sb.append(" ").append(secret);

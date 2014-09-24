@@ -72,7 +72,6 @@ import ow.routing.RoutingServiceProvider;
  */
 public class BasicDHTImpl<V extends Serializable> implements DHT<V> {
 	final static Logger logger = Logger.getLogger("dht");
-
 	private final static String GLOBAL_DB_NAME = "global";
 
 	// members common to higher level services (DHT and Mcast)
@@ -244,7 +243,6 @@ public class BasicDHTImpl<V extends Serializable> implements DHT<V> {
 	public Set<ValueInfo<V>> get(ID key)
 			throws RoutingException {
 		ID[] keys = { key };
-
 		Set<ValueInfo<V>>[] results = new Set/*<ValueInfo<V>>*/[keys.length];
 
 		RoutingResult[] routingRes = this.getRemotely(keys, results);

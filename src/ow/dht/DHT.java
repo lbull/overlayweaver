@@ -150,7 +150,7 @@ public interface DHT<V extends Serializable> extends HighLevelService {
 			this.key = key; this.values = values;
 		}
 
-		public ID getKey() { System.out.println("debug put key and value" + this.key);return this.key; }
+		public ID getKey() { System.out.println("debug put key and value " + this.key);return this.key; }
 		public V[] getValues() { return this.values; }
 
 		public String toString() {
@@ -187,7 +187,6 @@ public interface DHT<V extends Serializable> extends HighLevelService {
 			StringBuilder sb = new StringBuilder();
 			sb.append("{ key: ").append(super.key.toString());
 			if (super.values != null) {
-				sb.append(", value:");
 				for (V v: super.values) sb.append(" ").append(v);
 			}
 			else if (this.valueHash != null) {
